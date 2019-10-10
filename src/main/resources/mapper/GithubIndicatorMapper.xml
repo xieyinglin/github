@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
-<mapper namespace="com.taosdata.github.dao.GithubIndicatorMapper">
-  <resultMap id="BaseResultMap" type="com.taosdata.github.domain.GithubIndicator">
+<mapper namespace="io.github.xieyinglin.dao.GithubIndicatorMapper">
+  <resultMap id="BaseResultMap" type="io.github.xieyinglin.domain.GithubIndicator">
     <id column="id" jdbcType="BIGINT" property="id" />
     <result column="userId" jdbcType="VARCHAR" property="userId" />
     <result column="projectName" jdbcType="VARCHAR" property="projectName" />
@@ -72,7 +72,7 @@
   <sql id="Base_Column_List">
     id, userId, projectName, watch, star, issues, fork, fetchTime
   </sql>
-  <select id="selectByExample" parameterType="com.taosdata.github.domain.GithubIndicatorExample" resultMap="BaseResultMap">
+  <select id="selectByExample" parameterType="io.github.xieyinglin.domain.GithubIndicatorExample" resultMap="BaseResultMap">
     select
     <if test="distinct">
       distinct
@@ -116,13 +116,13 @@
   </select>
 
 
-  <delete id="deleteByExample" parameterType="com.taosdata.github.domain.GithubIndicatorExample">
+  <delete id="deleteByExample" parameterType="io.github.xieyinglin.domain.GithubIndicatorExample">
     delete from td_github
     <if test="_parameter != null">
       <include refid="Example_Where_Clause" />
     </if>
   </delete>
-  <insert id="insert" keyColumn="id" keyProperty="id" parameterType="com.taosdata.github.domain.GithubIndicator" useGeneratedKeys="true">
+  <insert id="insert" keyColumn="id" keyProperty="id" parameterType="io.github.xieyinglin.domain.GithubIndicator" useGeneratedKeys="true">
     insert into td_github (userId, projectName, watch, 
       star, issues, fork, 
       fetchTime)
@@ -130,7 +130,7 @@
       #{star,jdbcType=INTEGER}, #{issues,jdbcType=INTEGER}, #{fork,jdbcType=INTEGER}, 
       #{fetchTime,jdbcType=TIMESTAMP})
   </insert>
-  <insert id="insertSelective" keyColumn="id" keyProperty="id" parameterType="com.taosdata.github.domain.GithubIndicator" useGeneratedKeys="true">
+  <insert id="insertSelective" keyColumn="id" keyProperty="id" parameterType="io.github.xieyinglin.domain.GithubIndicator" useGeneratedKeys="true">
     insert into td_github
     <trim prefix="(" suffix=")" suffixOverrides=",">
       <if test="userId != null">
@@ -179,7 +179,7 @@
       </if>
     </trim>
   </insert>
-  <select id="countByExample" parameterType="com.taosdata.github.domain.GithubIndicatorExample" resultType="java.lang.Long">
+  <select id="countByExample" parameterType="io.github.xieyinglin.domain.GithubIndicatorExample" resultType="java.lang.Long">
     select count(*) from td_github
     <if test="_parameter != null">
       <include refid="Example_Where_Clause" />
@@ -231,7 +231,7 @@
       <include refid="Update_By_Example_Where_Clause" />
     </if>
   </update>
-  <update id="updateByPrimaryKeySelective" parameterType="com.taosdata.github.domain.GithubIndicator">
+  <update id="updateByPrimaryKeySelective" parameterType="io.github.xieyinglin.domain.GithubIndicator">
     update td_github
     <set>
       <if test="userId != null">
@@ -258,7 +258,7 @@
     </set>
     where id = #{id,jdbcType=BIGINT}
   </update>
-  <update id="updateByPrimaryKey" parameterType="com.taosdata.github.domain.GithubIndicator">
+  <update id="updateByPrimaryKey" parameterType="io.github.xieyinglin.domain.GithubIndicator">
     update td_github
     set userId = #{userId,jdbcType=VARCHAR},
       projectName = #{projectName,jdbcType=VARCHAR},

@@ -19,7 +19,7 @@
         </jdbcConnection>
 
 
-        <javaModelGenerator targetPackage="com.taosdata.github.domain"
+        <javaModelGenerator targetPackage="io.github.xieyinglin.domain"
                             targetProject="src/main/java">
             <property name="enableSubPackages" value="true"/>
             <property name="trimStrings" value="true"/>
@@ -29,7 +29,7 @@
             <property name="enableSubPackages" value="true"/>
         </sqlMapGenerator>
 
-        <javaClientGenerator type="XMLMAPPER" targetPackage="com.taosdata.github.dao"
+        <javaClientGenerator type="XMLMAPPER" targetPackage="io.github.xieyinglin.dao"
                              targetProject="src/main/java">
             <property name="enableSubPackages" value="true"/>
         </javaClientGenerator>
