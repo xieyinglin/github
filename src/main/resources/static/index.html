@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html style="height: 100%">
+   <head>
+       <meta charset="utf-8">
+       <link rel="stylesheet" type="text/css" href="js/bootstrap-4.3.1-dist/css/bootstrap.min.css">
+       <link rel="stylesheet" type="text/css" href="js/bootstrap-datepicker-1.9.0-dist/css/bootstrap-datepicker3.min.css">
+      
+       <script type="text/javascript" src="js/jquery-1.9.1.min.js"></script>
+       <script type="text/javascript" src="js/bootstrap-datepicker-1.9.0-dist/js/bootstrap-datepicker.min.js"></script>
+       <script type="text/javascript" src="js/bootstrap-datepicker-1.9.0-dist/locales/bootstrap-datepicker.zh-CN.min.js"></script>
+       <script type="text/javascript" src="js/My97DatePicker/WdatePicker.js"></script>
+       
+   </head>
+   <body style="height: 100%; margin: 0">
+       <div id="condition" style="height: 30px; margin: 20px 400px">
+            <input type = "text" id="startDate"  class="Wdate" onclick="WdatePicker({maxDate:'#F{$dp.$D(\'endDate\')}'|| 'new Date()', dateFmt:'yyyyMMdd'})" />
+            <span class="input-group-addon"> to </span>
+            <input type = "text" id="endDate"  class="Wdate" onclick="WdatePicker({minDate:'#F{$dp.$D(\'startDate\')}', maxDate:new Date(), dateFmt:'yyyyMMdd'})"/>
+            <button onclick="doQuery()" style="width:150px; height:25px">Query</button>
+       </div>
+       <div id="pie" style="height: 200px; width: 1200px; margin: 20px"></div>
+       <div id="line" style="height: 400px; width: 1200px; margin-top:20px; margin-left:100px"></div>
+       <script type="text/javascript" src="js/echarts/echarts.min.js"></script>
+       <script type="text/javascript" src="js/echarts/echarts-gl.min.js"></script>
+       <script type="text/javascript" src="js/echarts/ecStat.min.js"></script>
+       <script type="text/javascript" src="js/echarts/dataTool.min.js"></script>
+       <script type="text/javascript" src="js/echarts/simplex.js"></script>
+       <script src="js/index/index.js"></script>
+   </body>
+</html>

@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html>
+ <head> 
+	<meta charset="utf-8" /> 
+	<title>TDEngine Github</title> 
+	<link rel="stylesheet" type="text/css" href="css/mystyle.css">
+
+	<script type="text/javascript" src="http://echarts.baidu.com/gallery/vendors/echarts/echarts.min.js"></script>
+    <script type="text/javascript" src="http://echarts.baidu.com/gallery/vendors/echarts-gl/echarts-gl.min.js"></script>
+    <script type="text/javascript" src="http://echarts.baidu.com/gallery/vendors/echarts-stat/ecStat.min.js"></script>
+    <script type="text/javascript" src="http://echarts.baidu.com/gallery/vendors/echarts/extension/dataTool.min.js"></script>
+       <!-- <script type="text/javascript" src="http://echarts.baidu.com/gallery/vendors/echarts/map/js/china.js"></script>
+       <script type="text/javascript" src="http://echarts.baidu.com/gallery/vendors/echarts/map/js/world.js"></script>
+       <script type="text/javascript" src="https://api.map.baidu.com/api?v=2.0&ak=xfhhaTThl11qYVrqLZii6w8qE5ggnhrY&__ec_v__=20190126"></script>
+       <script type="text/javascript" src="http://echarts.baidu.com/gallery/vendors/echarts/extension/bmap.min.js"></script> 
+       <script type="text/javascript" src="http://echarts.baidu.com/gallery/vendors/simplex.js"></script>-->
+
+  	<!-- <script src="/tdengine/static/js/My97DatePicker/WdatePicker.js"></script>  -->
+
+  	<script src="js/index/line.js"></script>
+
+ </head>
+ <body>
+	<div class="dateContainer"> 
+			<!-- <input  type="text" id="startTime" class="Wdate" onclick="WdatePicker({maxDate:'#F{$dp.$D(\'endTime\')}'})">
+				<input type="text" id="endTime" class="Wdate" onclick="WdatePicker({minDate:'#F{$dp.$D(\'startTime\')}'})"> -->
+			<button class="btn" onclick="getData()">Search</button> 
+	</div>
+	<div class="parent">
+			<div id = "line" class="leftBox"></div> 
+			<div class="rightBox"></div> 
+	</div>
+ </body>
+</html>
