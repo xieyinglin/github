@@ -6,7 +6,7 @@ import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.scheduling.annotation.EnableScheduling;
 
-@MapperScan(basePackages = {"com.xieyinglin.github.dao"})
+@MapperScan(basePackages = {"io.github.xieyinglin.dao"})
 @EnableScheduling
 @SpringBootApplication
 public class GithubApplication {

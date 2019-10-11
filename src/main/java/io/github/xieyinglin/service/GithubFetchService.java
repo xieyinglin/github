@@ -20,20 +20,18 @@ public class GithubFetchService {
     @Value("${github.projectName}")
     private String projectName;
 
-    @Scheduled(cron = "0 0 0/1 * * *")
-    // @Scheduled(cron = "0/5 * * * * *")
+    @Scheduled(cron = "0/5 0 0 * * *")
     public void fetchGithubIndicator() {
-
+        log.info("======================");
+        log.info("start fetch {}/{}", userId, projectName);
         try {
             githubService.crawlGithubIndicator(userId, projectName);
         } catch (Exception e) {
             log.error("fetchGithubIndicator error, userId {}, projectName {}", userId, projectName, e);
         }
-
-    }
-
-    // @Scheduled(cron = "0/6 * * * * *")
-    public void test() {
+        log.info("end fetch {}/{}", userId, projectName);
         log.info("======================");
     }
+
+
 }
