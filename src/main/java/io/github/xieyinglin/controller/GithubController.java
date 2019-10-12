@@ -58,32 +58,4 @@ public class GithubController {
 		return new ResultMsg<GithubIndicatorVo>(githubIndicatorVo);
     }
 
-
-
-
-    /**
-     *  String resultMsg = "{
-			'code': 'Success',
-			'msg': '',
-			'data': {
-				'xDate': ['2019-08-06', '2019-08-07', '2019-08-08', '2019-08-09', '2019-08-10', '2019-08-11', '2019-08-12'],
-				'watch': {
-					'total': 50,
-					'data': [19.55, 20.43, 57.46, 48.87, 26.33, 57.38, 42.1]
-				},
-				'star': {
-					'total': 50,
-					'data': [22.18, 24.76, 20.37, 28.09, 22.25, 26.75, 20.14]
-				},
-				'issues': {
-					'total': 5360,
-					'data': [599, 302, 753, 695, 673, 558, 779]
-				},
-				'fork': {
-					'total': 450,
-					'data': [59, 32, 73, 69, 63, 58, 79]
-				}
-			}
-		}";
-     */
 }

@@ -14,6 +14,7 @@ this project is aim for get the specified github project's indicators,  for exa
 # schedule fetch github info
 github.userId = taosdata
 github.projectName = TDengine
+github.fetch.schedule.cron = 0 0 0/1 * * *
 
 
 spring.datasource.driver-class-name=com.mysql.jdbc.Driver
