@@ -10,7 +10,7 @@
 
 	<groupId>io.github.xieyinglin</groupId>
 	<artifactId>github</artifactId>
-	<version>0.0.3-SNAPSHOT</version>
+	<version>0.0.1-SNAPSHOT</version>
 
 	<name>Github crawler</name>
 	<description>Github crawler for watch, star, fork, issues </description>
